@@ -1,0 +1,62 @@
+---
+title: "Curriculum Vitae"
+description: "Education, research, teaching, and service."
+---
+
+::: {.callout-tip appearance="minimal"}
+A formatted PDF of this CV is available on request — [email me](mailto:emmanuelhackman825@gmail.com).
+:::
+
+## Education
+
+**PhD, Computational Mathematics** — *University of Southern Mississippi*
+*(in progress)*
+
+## Research interests
+
+- Physics-informed neural networks for partial differential equations
+- 3D incompressible Navier–Stokes equations
+- Numerical analysis of scientific machine learning
+- Inverse problems in 4D-flow MRI of cerebrospinal fluid
+- Hybrid PINN / finite-volume formulations for high-Reynolds-number flow
+
+## Skills
+
+**Languages.** Python (advanced), JAX, PyTorch, C/C++, MATLAB, LaTeX.
+**Numerical methods.** Finite differences, finite volumes, projection methods,
+spectral methods, Runge–Kutta integrators, automatic differentiation.
+**Machine learning.** PINNs, Fourier-feature networks, neural ODEs, residual
+adaptive sampling, NTK-balanced loss weighting.
+**Tooling.** Hydra, Weights & Biases, Docker, Git, GitHub Actions, conda,
+DeepXDE, NVIDIA Modulus, FEniCSx, Dedalus.
+**HPC.** Single-node and multi-GPU training (`jax.pmap`, `torch.distributed`)
+on NVIDIA A100 / H100.
+
+## Selected projects
+
+**PINN-NS Research Workspace** *(2026)*
+Modular dissertation codebase — separates differential operators, PINN
+architectures, samplers, trainers, and loss formulations so each can be swapped
+without rewriting the others. Fully config-driven (Hydra-style YAML), with a
+reproducibility checklist on every experiment.
+
+**3D Navier–Stokes Beltrami Benchmark** *(in progress, 2026)*
+PINN validated against the closed-form Beltrami solution (Ethier & Steinman 1994),
+with a classical projection-method baseline for side-by-side $L^2$ / divergence
+/ wall-clock comparison.
+
+**Method of Manufactured Solutions for 3D PINNs** *(in progress, 2026)*
+Adam-only vs Adam→L-BFGS optimizer study on a manufactured 3D solenoidal velocity
+field with analytic forcing.
+
+## Service & community
+
+*To be added.*
+
+## Teaching
+
+*To be added.*
+
+---
+
+*Last updated: 2026-05-06.*

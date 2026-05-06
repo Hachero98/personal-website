@@ -1,0 +1,61 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "*.qmd"
+    - "!README.md"
+    - "!DEPLOY.md"
+
+website:
+  title: "Emmanuel Hackman"
+  description: "PhD researcher in computational mathematics — physics-informed neural networks for 3D Navier–Stokes."
+  site-url: "https://personal-website-hachero98.vercel.app"
+  repo-url: "https://github.com/Hachero98/personal-website"
+  favicon: assets/img/profile.jpg
+  open-graph: true
+  twitter-card: true
+
+  navbar:
+    background: light
+    pinned: true
+    left:
+      - href: index.qmd
+        text: Home
+      - href: research/index.qmd
+        text: Research
+      - href: publications/index.qmd
+        text: Publications
+      - href: cv/index.qmd
+        text: CV
+      - href: contact.qmd
+        text: Contact
+    right:
+      - icon: github
+        href: https://github.com/Hachero98
+        aria-label: GitHub
+      - icon: envelope
+        href: mailto:emmanuelhackman825@gmail.com
+        aria-label: Email
+
+  page-footer:
+    left: "© 2026 Emmanuel Hackman"
+    center: "Built with [Quarto](https://quarto.org)"
+    right:
+      - icon: github
+        href: https://github.com/Hachero98
+      - icon: envelope
+        href: mailto:emmanuelhackman825@gmail.com
+
+format:
+  html:
+    theme:
+      light: [cosmo, assets/css/custom.scss]
+    css: assets/css/styles.css
+    toc: true
+    toc-location: right
+    code-copy: true
+    smooth-scroll: true
+    link-external-newwindow: true
+    anchor-sections: true
+    fig-align: center
+    html-math-method: katex

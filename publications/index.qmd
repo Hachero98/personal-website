@@ -1,0 +1,45 @@
+---
+title: "Publications"
+description: "Papers, preprints, and research artifacts."
+---
+
+## In preparation
+
+::: {.callout-note appearance="simple"}
+**Hackman, E.** *Physics-Informed Neural Networks for 3D Incompressible
+Navier–Stokes with Applications to Cerebrospinal Fluid Flow.* (2026)
+*— in preparation.*
+:::
+
+## Software & artifacts
+
+**PINN-NS Research Workspace** (2026). Open-source dissertation workspace —
+modular PINN solvers, classical numerical baselines, manufactured solutions, and
+fully reproducible experiment configs for 3D Navier–Stokes.
+[\[CITATION\]](#) · [\[GitHub\]](#)
+
+## Coming soon
+
+The first **completed experiment entry** (EXP-2026-001 — Method of Manufactured
+Solutions smoke test) is expected mid-2026 and will be archived here with figures,
+configs, and the underlying `manifest.json`.
+
+A workshop paper draft from the **3D Beltrami benchmark** (EXP-2026-002 vs the
+projection-method baseline) is targeted for the second half of 2026.
+
+---
+
+## Talks
+
+*To be added.*
+
+## Posters
+
+*To be added.*
+
+---
+
+::: {.callout-tip appearance="minimal"}
+For pre-prints and code, see my [GitHub](https://github.com/Hachero98) or
+[email me](mailto:emmanuelhackman825@gmail.com).
+:::

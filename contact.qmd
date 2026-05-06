@@ -1,0 +1,30 @@
+---
+title: "Contact"
+description: "How to get in touch."
+toc: false
+---
+
+I'm happy to hear from collaborators, students, and anyone interested in PINNs
+for fluid dynamics or medical imaging.
+
+## Email
+
+[emmanuelhackman825@gmail.com](mailto:emmanuelhackman825@gmail.com)
+
+## Affiliation
+
+Department of Mathematics
+University of Southern Mississippi
+Hattiesburg, MS
+
+## Online
+
+- **GitHub** — [github.com/Hachero98](https://github.com/Hachero98)
+- **ORCID** — *(link coming soon)*
+- **Google Scholar** — *(link coming soon)*
+
+---
+
+::: {.callout-note appearance="minimal"}
+The fastest way to reach me is email. I usually respond within a few days.
+:::

@@ -1,0 +1,62 @@
+---
+title: "Emmanuel Hackman"
+subtitle: "PhD candidate in computational mathematics"
+page-layout: full
+toc: false
+---
+
+::: {.profile-card}
+![](assets/img/profile.jpg){.profile-photo fig-alt="Portrait of Emmanuel Hackman"}
+
+::: {.bio}
+I am a PhD candidate at the **University of Southern Mississippi**, working at the
+intersection of **numerical analysis**, **scientific machine learning**, and
+**fluid dynamics**.
+
+My dissertation develops **physics-informed neural networks (PINNs)** for the
+3D incompressible **Navier–Stokes equations**, with applications to
+**cerebrospinal fluid flow in Parkinson's disease**, material science, and
+high-Reynolds-number CFD.
+
+[Research](research/index.qmd){.btn .btn-primary .btn-sm}
+[Publications](publications/index.qmd){.btn .btn-outline-primary .btn-sm}
+[CV](cv/index.qmd){.btn .btn-outline-primary .btn-sm}
+[Email](mailto:emmanuelhackman825@gmail.com){.btn .btn-outline-primary .btn-sm}
+:::
+:::
+
+## Research interests
+
+[Physics-Informed Neural Networks]{.tag}
+[Navier–Stokes Equations]{.tag}
+[Computational Fluid Dynamics]{.tag}
+[Numerical Analysis]{.tag}
+[Scientific Machine Learning]{.tag}
+[JAX / PyTorch Autodiff]{.tag}
+[Cerebrospinal Fluid Flow]{.tag}
+[Parkinson's Disease Imaging]{.tag}
+
+## What I am working on
+
+I am building a reproducible research pipeline that benchmarks PINN-based solvers
+against classical numerical baselines (projection methods, spectral solvers, RK4
+time integration) on canonical problems — Taylor–Green, Kovasznay, Beltrami flow —
+and then transfers the validated method to medical imaging data.
+
+The headline near-term result is a **3D Navier–Stokes PINN validated against the
+analytic Beltrami benchmark**, with side-by-side classical baselines on $L^2$
+error, divergence, and wall-clock cost. See [Research](research/index.qmd) for
+details.
+
+## Recent
+
+- **2026-05** — First experiment runs (Kovasznay AD-vs-FV) completed; pressure metric fix landed.
+- **2026-05** — Dissertation research workspace scaffolded with full reproducibility checklist.
+- **2026** — Coursework and qualifying exam preparation at USM.
+
+---
+
+::: {.callout-tip appearance="minimal"}
+**Open to collaborations** on PINNs for incompressible flow, inverse problems in
+4D-flow MRI, and physics-informed benchmarks. [Get in touch.](contact.qmd)
+:::

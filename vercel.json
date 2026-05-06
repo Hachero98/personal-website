@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "echo skip",
+  "buildCommand": "curl -fsSL https://github.com/quarto-dev/quarto-cli/releases/download/v1.9.37/quarto-1.9.37-linux-amd64.tar.gz | tar -xz && export PATH=\"$PWD/quarto-1.9.37/bin:$PATH\" && quarto render",
+  "outputDirectory": "_site",
+  "cleanUrls": true,
+  "trailingSlash": false
+}

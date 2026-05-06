@@ -1,0 +1,24 @@
+# Quarto
+/_site/
+/.quarto/
+**/*.quarto_ipynb
+
+# macOS
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Vercel
+.vercel/
+
+# Node (if ever used for tooling)
+node_modules/
+
+# Logs / env
+*.log
+.env
+*.local

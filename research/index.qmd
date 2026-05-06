@@ -1,0 +1,91 @@
+---
+title: "Research"
+description: "Physics-informed neural networks for the 3D incompressible Navier–Stokes equations."
+---
+
+## Overview
+
+My PhD research develops **physics-informed neural networks (PINNs)** as an
+alternative — and a complement — to classical mesh-based solvers for the
+incompressible Navier–Stokes system. The work spans three threads: rigorous
+benchmarking against analytic solutions, hybrid PINN/finite-volume formulations,
+and translational applications in medical imaging and material science.
+
+## The mathematical setting
+
+The core problem is the incompressible Navier–Stokes system on a domain
+$\Omega \subset \mathbb{R}^3$ with $t \in [0, T]$:
+
+$$
+\frac{\partial \mathbf{u}}{\partial t} + (\mathbf{u} \cdot \nabla)\mathbf{u}
+\;=\; -\frac{1}{\rho}\nabla p + \nu\, \Delta \mathbf{u} + \mathbf{f},
+\qquad \nabla \cdot \mathbf{u} = 0,
+$$
+
+where $\mathbf{u}(x,y,z,t) = (u, v, w)^\top$ is the velocity, $p$ is the
+pressure, $\rho$ the density, $\nu$ the kinematic viscosity, and $\mathbf{f}$ a
+body force.
+
+A PINN $\mathcal{N}_\theta : \mathbb{R}^4 \to \mathbb{R}^4$ is trained by
+minimizing a composite loss:
+
+$$
+\mathcal{L}(\theta)
+= \lambda_{\text{pde}}\, \mathcal{L}_{\text{pde}}
++ \lambda_{\text{div}}\, \mathcal{L}_{\nabla\cdot\mathbf{u}}
++ \lambda_{\text{bc}}\, \mathcal{L}_{\text{bc}}
++ \lambda_{\text{ic}}\, \mathcal{L}_{\text{ic}}
++ \lambda_{\text{data}}\, \mathcal{L}_{\text{data}},
+$$
+
+with each term an $L^2$ residual on collocation points sampled by Sobol or
+residual-adaptive strategies. Differential operators are realized via JAX /
+PyTorch automatic differentiation.
+
+## Research threads
+
+### 1. Benchmarking PINNs against analytic solutions
+
+Every PINN result is reported alongside a classical baseline (projection method,
+spectral solver, RK4) on canonical flows where ground truth is known:
+**Taylor–Green vortex**, **Kovasznay flow**, and **Beltrami flow**
+(Ethier & Steinman 1994).
+
+**Reported metrics:** $L^2$ relative error, $L^\infty$ error, divergence
+$\lVert \nabla \cdot \mathbf{u} \rVert_2$, wall-clock, and GPU memory.
+
+### 2. Hybrid PINN / finite-volume formulations
+
+I am exploring formulations that combine PINN flexibility (mesh-free, easily
+incorporates data) with the conservation guarantees of finite-volume schemes —
+trying to inherit the best of both worlds while keeping training stable on
+high-Reynolds-number flows.
+
+### 3. Cerebrospinal fluid flow in Parkinson's disease
+
+The longer-term application is **inverse problems on 4D-flow MRI** of
+cerebrospinal fluid (CSF). The goal: recover effective viscosity and flow
+parameters from sparse, noisy clinical data, where classical solvers struggle
+with the lack of clean boundary conditions but PINNs can ingest the data
+directly.
+
+### 4. Material science applications
+
+Secondary application area: pore-scale flow simulation in heterogeneous porous
+media, where multi-scale PINN architectures show promise.
+
+## Tooling and reproducibility
+
+- **Compute:** NVIDIA A100 / H100; multi-GPU via `jax.pmap` or `torch.distributed`.
+- **Stack:** JAX + Equinox, PyTorch, Hydra (config), Weights & Biases (logging),
+  DeepXDE / NVIDIA Modulus (reference baselines).
+- **Numerical baselines:** FEniCSx, Dedalus (spectral), in-house projection solver.
+- Every experiment writes a `manifest.json` with git SHA, config hash, seed,
+  hardware, library versions, wall-clock, and final metrics — fully
+  reproducible from a single config file.
+
+## Current focus
+
+Validating a **3D Navier–Stokes PINN against the Beltrami benchmark**, with a
+side-by-side classical projection-method comparison ready for the next group
+meeting.
