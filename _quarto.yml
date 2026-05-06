@@ -12,8 +12,19 @@ website:
   site-url: "https://personal-website-hachero98.vercel.app"
   repo-url: "https://github.com/Hachero98/personal-website"
   favicon: assets/img/profile.jpg
-  open-graph: true
-  twitter-card: true
+
+  open-graph:
+    locale: en_US
+    image: assets/img/profile.jpg
+  twitter-card:
+    creator: "@"
+    image: assets/img/profile.jpg
+    card-style: summary
+
+  search:
+    location: navbar
+    type: textbox
+    copy-button: true
 
   navbar:
     background: light
@@ -29,31 +40,22 @@ website:
         text: CV
       - href: contact.qmd
         text: Contact
-    right:
-      - icon: github
-        href: https://github.com/Hachero98
-        aria-label: GitHub
-      - icon: envelope
-        href: mailto:emmanuelhackman825@gmail.com
-        aria-label: Email
 
   page-footer:
+    border: true
     left: "© 2026 Emmanuel Hackman"
-    center: "Built with [Quarto](https://quarto.org)"
-    right:
-      - icon: github
-        href: https://github.com/Hachero98
-      - icon: envelope
-        href: mailto:emmanuelhackman825@gmail.com
+    right: "Built with [Quarto](https://quarto.org) · [GitHub](https://github.com/Hachero98/personal-website)"
 
 format:
   html:
     theme:
       light: [cosmo, assets/css/custom.scss]
+      dark: [cosmo, assets/css/custom.scss, assets/css/dark.scss]
     css: assets/css/styles.css
     toc: true
     toc-location: right
     code-copy: true
+    code-overflow: wrap
     smooth-scroll: true
     link-external-newwindow: true
     anchor-sections: true

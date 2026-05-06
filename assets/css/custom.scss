@@ -1,57 +1,242 @@
 /*-- scss:defaults --*/
 
 $font-family-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
-$font-family-serif: "Source Serif 4", Georgia, "Times New Roman", serif !default;
+$font-family-serif: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif !default;
+$font-family-base: $font-family-serif !default;
 
-$body-color: #1f2937 !default;
-$link-color: #1d4ed8 !default;
-$primary: #1d4ed8 !default;
+$body-color: #1a1a1a !default;
+$body-bg: #ffffff !default;
+$link-color: #003a8c !default;
+$link-hover-color: #001f55 !default;
+
+$primary: #1a1a1a !default;
 
 $navbar-bg: #ffffff !default;
-$footer-bg: #f8fafc !default;
+$navbar-light-color: #444 !default;
+$navbar-light-hover-color: #000 !default;
+$navbar-light-active-color: #000 !default;
+
+$h1-font-size: 3rem !default;
+$h2-font-size: 1.7rem !default;
+$h3-font-size: 1.3rem !default;
+$line-height-base: 1.7 !default;
 
 /*-- scss:rules --*/
 
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap');
+
+html { scroll-padding-top: 80px; }
+
 body {
-  font-feature-settings: "kern", "liga";
-  line-height: 1.65;
+  font-family: $font-family-serif;
+  font-size: 1.0625rem;
+  font-feature-settings: "kern", "liga", "onum";
+  color: $body-color;
+  background: $body-bg;
 }
 
-h1, h2, h3 {
+p { margin-bottom: 1.25rem; }
+
+h1, h2, h3, h4 {
   font-family: $font-family-serif;
-  letter-spacing: -0.01em;
+  font-weight: 600;
+  letter-spacing: -0.012em;
+  line-height: 1.22;
+  color: #111;
+}
+
+h1 { font-size: 2.75rem; margin: 1.5rem 0 1rem; }
+
+h2 {
+  font-size: 1.6rem;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 1.5rem;
+  margin-top: 2.75rem;
+  margin-bottom: 1rem;
+}
+
+h3 { font-size: 1.25rem; margin-top: 1.75rem; margin-bottom: 0.75rem; }
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 58, 140, 0.2);
+  transition: border-color 120ms ease, color 120ms ease;
+}
+
+a:hover {
+  color: $link-hover-color;
+  border-bottom-color: currentColor;
+}
+
+/* Sans-serif navigation */
+.navbar,
+.navbar a,
+.navbar-brand,
+.navbar .nav-link {
+  font-family: $font-family-sans-serif;
+  font-weight: 500;
 }
 
 .navbar {
-  border-bottom: 1px solid #e5e7eb;
+  background: #ffffff !important;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0.9rem 1.5rem;
 }
 
-.profile-card {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  align-items: flex-start;
-  margin: 1.5rem 0 2.5rem;
+.navbar .navbar-brand {
+  font-weight: 600;
+  color: #111 !important;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+}
 
-  img {
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-  }
+.navbar .nav-link {
+  color: #444 !important;
+  font-size: 0.93rem;
+  letter-spacing: 0.02em;
+  margin: 0 0.15rem;
+  border-bottom: none;
+}
 
-  .bio {
-    flex: 1 1 320px;
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #000 !important;
+}
+
+/* Center the body content like a single-column editorial site */
+main.content,
+.content > section,
+.quarto-title-block,
+.page-columns > .content {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hero block */
+.hero { margin: 2.5rem 0 3.5rem; }
+
+.hero .hero-question {
+  font-family: $font-family-serif;
+  font-style: italic;
+  font-size: 1.6rem;
+  line-height: 1.35;
+  color: #444;
+  max-width: 36ch;
+  margin: 0 0 2rem;
+}
+
+.hero .hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  align-items: start;
+}
+
+@media (min-width: 700px) {
+  .hero .hero-grid {
+    grid-template-columns: 200px 1fr;
+    gap: 2.5rem;
   }
 }
 
+.hero img.hero-photo {
+  width: 200px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  display: block;
+}
+
+.hero .hero-bio {
+  font-size: 1.125rem;
+  line-height: 1.65;
+}
+
+.hero .hero-bio p:first-child { margin-top: 0; }
+
+.hero .hero-links {
+  margin-top: 1.25rem;
+  font-family: $font-family-sans-serif;
+  font-size: 0.95rem;
+}
+
+.hero .hero-links a {
+  margin-right: 1.25rem;
+  border-bottom: 1px solid rgba(0, 58, 140, 0.25);
+}
+
+/* Inline tag list, no pill chips */
 .tag {
-  display: inline-block;
-  padding: 0.15rem 0.6rem;
-  margin: 0.15rem 0.25rem 0.15rem 0;
-  background: #eef2ff;
-  color: #3730a3;
-  border-radius: 999px;
+  display: inline;
+  margin-right: 0.4rem;
+  font-style: italic;
+  color: #555;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+
+.tag::after { content: " · "; color: #bbb; }
+.tag:last-child::after { content: ""; }
+
+/* Tone down callouts */
+.callout {
+  border: 0 !important;
+  border-left: 3px solid #ddd !important;
+  background: #fafafa !important;
+  border-radius: 0 !important;
+  padding: 0.75rem 1rem !important;
+}
+
+.callout .callout-header { background: transparent !important; }
+.callout .callout-title { font-weight: 600; }
+
+hr { border: 0; border-top: 1px solid #e5e5e5; margin: 2.25rem 0; }
+
+blockquote {
+  border-left: 3px solid #ddd;
+  padding-left: 1rem;
+  color: #555;
+  font-style: italic;
+}
+
+/* Footer */
+.footer, footer.page-footer, .nav-footer {
+  background: #ffffff !important;
+  border-top: 1px solid #e5e5e5;
+  font-family: $font-family-sans-serif;
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: 4rem;
+}
+
+.footer a, footer.page-footer a, .nav-footer a {
+  color: #555;
+  border-bottom: none;
+}
+
+.footer a:hover, footer.page-footer a:hover, .nav-footer a:hover {
+  color: #000;
+}
+
+/* TOC */
+#TOC, .sidebar-navigation {
+  font-family: $font-family-sans-serif;
   font-size: 0.85rem;
 }
+
+#TOC a, .sidebar-navigation a {
+  color: #666;
+  border-bottom: none;
+}
+
+#TOC a:hover, .sidebar-navigation a:hover { color: #000; }
+
+/* Hide Quarto title banner — we render a custom hero on the home page */
+.quarto-title-banner { display: none; }
+
+/* KaTeX */
+.katex { font-size: 1.05em; }
