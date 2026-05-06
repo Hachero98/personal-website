@@ -14,6 +14,21 @@ echo "User: $(id -un)"
 ls -la
 df -h "$PWD" /tmp 2>&1 || true
 
+echo "==> Git status before checkout"
+git -C "$PWD" log -1 --stat 2>&1 | head -25 || true
+echo "Tracked files at HEAD:"
+git -C "$PWD" ls-tree -r HEAD --name-only 2>&1 | head -30 || true
+
+echo "==> Forcing git checkout to materialize tracked files"
+# Vercel's clone sometimes leaves the working tree unpopulated.
+# A no-op checkout is harmless if files are already present.
+git -C "$PWD" checkout -- . 2>&1 || echo "(checkout returned non-zero)"
+
+echo "==> Working directory after checkout"
+ls -la
+echo "Project files:"
+find . -maxdepth 2 -type f \( -name "*.qmd" -o -name "_quarto.yml" -o -name "*.scss" \) 2>&1 | head -20
+
 echo "==> Setting writable cache dirs inside the project"
 mkdir -p ./_tmp ./_cache/deno ./_cache/xdg
 export TMPDIR="$PWD/_tmp"
