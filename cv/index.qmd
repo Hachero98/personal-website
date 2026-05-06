@@ -1,10 +1,10 @@
 ---
 title: "Curriculum Vitae"
-description: "Education, research, teaching, and service."
+description-meta: "Education, research, teaching, and service."
 ---
 
-::: {.callout-tip appearance="minimal"}
-A formatted PDF of this CV is available on request — [email me](mailto:emmanuelhackman825@gmail.com).
+::: {.hero-subpage}
+Education, research, and the tools I rely on. A formatted PDF is available on [request](mailto:emmanuelhackman825@gmail.com).
 :::
 
 ## Education

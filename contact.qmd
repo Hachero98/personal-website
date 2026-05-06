@@ -1,11 +1,12 @@
 ---
 title: "Contact"
-description: "How to get in touch."
+description-meta: "How to get in touch."
 toc: false
 ---
 
-I'm happy to hear from collaborators, students, and anyone interested in PINNs
-for fluid dynamics or medical imaging.
+::: {.hero-subpage}
+Always glad to hear from collaborators, students, and anyone curious about PINNs for fluid dynamics or medical imaging.
+:::
 
 ## Email
 

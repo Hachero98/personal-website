@@ -1,7 +1,11 @@
 ---
 title: "Research"
-description: "Physics-informed neural networks for the 3D incompressible Navier–Stokes equations."
+description-meta: "Physics-informed neural networks for the 3D incompressible Navier–Stokes equations."
 ---
+
+::: {.hero-subpage}
+Can a neural network solve the Navier–Stokes equations as well as a classical method — and how do we know when to trust the answer?
+:::
 
 ## Overview
 

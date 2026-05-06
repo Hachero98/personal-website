@@ -1,7 +1,11 @@
 ---
 title: "Publications"
-description: "Papers, preprints, and research artifacts."
+description-meta: "Papers, preprints, and reproducible research artifacts."
 ---
+
+::: {.hero-subpage}
+A record in progress — papers, preprints, and the reproducible artifacts behind each one.
+:::
 
 ## In preparation
 

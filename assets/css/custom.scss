@@ -117,6 +117,17 @@ main.content,
 /* Hero block */
 .hero { margin: 2.5rem 0 3.5rem; }
 
+/* Subpage editorial intro — one-line italic question/statement under the page title */
+.hero-subpage {
+  font-family: $font-family-serif;
+  font-style: italic;
+  font-size: 1.35rem;
+  line-height: 1.4;
+  color: #555;
+  max-width: 44ch;
+  margin: 0.25rem 0 2.5rem;
+}
+
 .hero .hero-question {
   font-family: $font-family-serif;
   font-style: italic;
