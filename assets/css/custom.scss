@@ -142,21 +142,11 @@ main.content,
 .hero .hero-question {
   font-family: $font-family-serif;
   font-style: italic;
-  font-size: 1.6rem;
-  line-height: 1.35;
+  font-size: 1.55rem;
+  line-height: 1.4;
   color: $text-soft;
-  max-width: 32ch;
+  max-width: 52ch;
   margin: 0 0 2rem;
-}
-
-.hero .hero-question-tail {
-  display: block;
-  font-style: normal;
-  font-size: 1rem;
-  color: rgba(90, 104, 99, 0.85);
-  letter-spacing: 0.01em;
-  margin-top: 0.85rem;
-  font-family: $font-family-sans-serif;
 }
 
 .hero .hero-grid {

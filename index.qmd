@@ -7,11 +7,8 @@ toc: false
 ::: {.hero}
 
 ::: {.hero-question}
-A neural network is only a Navier–Stokes solver if it can beat a 1968 algorithm.
-
-::: {.hero-question-tail}
-I'm trying to find out where it can.
-:::
+A neural network is only a Navier–Stokes solver\
+if it can beat a 1968 algorithm. I'm trying to find out where it can.
 :::
 
 ::: {.hero-grid}
