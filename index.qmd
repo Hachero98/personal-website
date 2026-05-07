@@ -7,7 +7,7 @@ toc: false
 ::: {.hero}
 
 ::: {.hero-question}
-What can the equations of fluid motion teach us about the world — and the human brain?
+A neural network is only a Navier–Stokes solver if it can beat a 1968 algorithm. I'm trying to find out where it can.
 :::
 
 ::: {.hero-grid}
