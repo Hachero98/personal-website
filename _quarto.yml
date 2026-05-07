@@ -12,6 +12,8 @@ project:
     - "!_tmp/**"
     - "!_cache/**"
 
+lang: en-US
+
 website:
   title: "Emmanuel Hackman"
   description: "PhD researcher in computational mathematics — physics-informed neural networks for 3D Navier–Stokes."
@@ -67,3 +69,10 @@ format:
     anchor-sections: true
     fig-align: center
     html-math-method: katex
+    highlight-style: github
+    code-block-bg: true
+    code-block-border-left: true
+
+bibliography: references.bib
+link-citations: true
+citations-hover: true
