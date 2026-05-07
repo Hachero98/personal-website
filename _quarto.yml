@@ -3,8 +3,14 @@ project:
   output-dir: _site
   render:
     - "*.qmd"
+    - "research/**/*.qmd"
+    - "publications/**/*.qmd"
+    - "cv/**/*.qmd"
     - "!README.md"
     - "!DEPLOY.md"
+    - "!quarto-*/**"
+    - "!_tmp/**"
+    - "!_cache/**"
 
 website:
   title: "Emmanuel Hackman"

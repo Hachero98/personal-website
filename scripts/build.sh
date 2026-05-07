@@ -37,19 +37,30 @@ export XDG_CACHE_HOME="$PWD/_cache/xdg"
 export XDG_DATA_HOME="$PWD/_cache/xdg"
 export HOME="${HOME:-$PWD/_cache}"
 
-echo "==> Downloading Quarto ${QUARTO_VERSION}"
-curl -fsSL "$QUARTO_URL" -o quarto.tar.gz
-ls -la quarto.tar.gz
+# Install Quarto OUTSIDE the project root. If we extract the tarball inside
+# $PWD, `quarto render` will recurse into quarto-${VERSION}/share/... and try
+# to compile Quarto's own template .qmd files (which contain EJS shortcodes
+# like `<%= filesafename %>`) — that's the build failure we hit before.
+QUARTO_INSTALL_DIR="/tmp/quarto-install"
+mkdir -p "$QUARTO_INSTALL_DIR"
 
-echo "==> Extracting"
-tar -xzf quarto.tar.gz
+# Belt-and-braces: if a previous run left a quarto-* folder inside the
+# project (e.g. from a cached checkout), nuke it before rendering.
+rm -rf "$PWD"/quarto-*/ "$PWD"/quarto.tar.gz
+
+echo "==> Downloading Quarto ${QUARTO_VERSION}"
+curl -fsSL "$QUARTO_URL" -o "$QUARTO_INSTALL_DIR/quarto.tar.gz"
+ls -la "$QUARTO_INSTALL_DIR/quarto.tar.gz"
+
+echo "==> Extracting to $QUARTO_INSTALL_DIR"
+tar -xzf "$QUARTO_INSTALL_DIR/quarto.tar.gz" -C "$QUARTO_INSTALL_DIR"
 
 echo "==> Locating quarto binary"
-QUARTO_BIN="$(find . -maxdepth 4 -type f -name quarto -perm -u+x 2>/dev/null | head -1 || true)"
+QUARTO_BIN="$(find "$QUARTO_INSTALL_DIR" -maxdepth 4 -type f -name quarto -perm -u+x 2>/dev/null | head -1 || true)"
 if [ -z "$QUARTO_BIN" ]; then
   echo "ERROR: quarto binary not found after extraction"
-  ls -la
-  find . -maxdepth 3 -type d
+  ls -la "$QUARTO_INSTALL_DIR"
+  find "$QUARTO_INSTALL_DIR" -maxdepth 3 -type d
   exit 1
 fi
 
