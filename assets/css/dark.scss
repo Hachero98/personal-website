@@ -1,13 +1,13 @@
 /*-- scss:defaults --*/
 
-// "Dark" mode — light-mint variant. High contrast: forest text on mint bg.
-$d-bg:        #E1F5EE;  // light-mint
-$d-bg-alt:    #DCEAE3;  // border-mint, slightly darker for panels
-$d-text:      #04342C;  // darkest forest
-$d-text-soft: #2D3A34;  // ink-soft
-$d-link:      #085041;  // forest
-$d-link-hov:  #04342C;  // darkest
-$d-border:    #B8DDCD;  // softer mint hairline
+// Dark mode — forest base. Cream text, sage links.
+$d-bg:        #085041;  // forest
+$d-bg-alt:    #04342C;  // darkest (panels, code blocks)
+$d-text:      #FAF7F2;  // cream
+$d-text-soft: #b9d3c8;  // muted mint
+$d-link:      #5DCAA5;  // sage
+$d-link-hov:  #9FE1CB;  // mint
+$d-border:    #1c5e4d;  // mid-forest hairline
 
 $body-bg: $d-bg !default;
 $body-color: $d-text !default;
@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6 { color: $d-text; }
 
 h2 { border-top-color: $d-border; }
 
-a { color: $d-link; border-bottom-color: rgba(8, 80, 65, 0.3); }
+a { color: $d-link; border-bottom-color: rgba(93, 202, 165, 0.35); }
 a:hover { color: $d-link-hov; }
 
 .navbar {
@@ -41,10 +41,10 @@ a:hover { color: $d-link-hov; }
 
 .hero .hero-question { color: $d-text-soft; }
 .hero-subpage { color: $d-text-soft; }
-.hero img.hero-photo { box-shadow: 0 2px 12px rgba(4, 52, 44, 0.15); }
+.hero img.hero-photo { box-shadow: 0 2px 16px rgba(0, 0, 0, 0.4); }
 
 .tag { color: $d-text-soft; }
-.tag::after { color: rgba(45, 58, 52, 0.5); }
+.tag::after { color: rgba(185, 211, 200, 0.5); }
 
 hr { border-top-color: $d-border; }
 
@@ -55,7 +55,7 @@ blockquote { border-left-color: $d-link; color: $d-text-soft; }
   background: $d-bg-alt !important;
   color: $d-text !important;
 }
-.callout .callout-title { color: $d-link; }
+.callout .callout-title { color: $d-link-hov; }
 
 .footer, footer.page-footer, .nav-footer {
   background: $d-bg !important;
@@ -70,7 +70,7 @@ blockquote { border-left-color: $d-link; color: $d-text-soft; }
 
 /* Search box */
 input.aa-Input, .aa-Form, .aa-DetachedSearchButton {
-  background: #FFFFFF !important;
+  background: $d-bg-alt !important;
   color: $d-text !important;
   border-color: $d-border !important;
 }
