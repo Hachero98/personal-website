@@ -1,13 +1,14 @@
 /*-- scss:defaults --*/
 
-// Dark mode — forest base. Cream text, sage links.
-$d-bg:        #085041;  // forest
-$d-bg-alt:    #04342C;  // darkest (panels, code blocks)
+// Dark mode — calm near-black with a subtle green undertone.
+// Sage/mint accents do the green-feeling work.
+$d-bg:        #122421;  // very dark, low-saturation green-tinted
+$d-bg-alt:    #0a1916;  // panels / code blocks
 $d-text:      #FAF7F2;  // cream
-$d-text-soft: #b9d3c8;  // muted mint
+$d-text-soft: #b0bdb8;  // muted gray-mint
 $d-link:      #5DCAA5;  // sage
 $d-link-hov:  #9FE1CB;  // mint
-$d-border:    #1c5e4d;  // mid-forest hairline
+$d-border:    #243a34;  // mid hairline
 
 $body-bg: $d-bg !default;
 $body-color: $d-text !default;
@@ -44,11 +45,16 @@ a:hover { color: $d-link-hov; }
 .hero img.hero-photo { box-shadow: 0 2px 16px rgba(0, 0, 0, 0.4); }
 
 .tag { color: $d-text-soft; }
-.tag::after { color: rgba(185, 211, 200, 0.5); }
+.tag::after { color: rgba(176, 189, 184, 0.5); }
 
 hr { border-top-color: $d-border; }
 
-blockquote { border-left-color: $d-link; color: $d-text-soft; }
+/* Blockquotes (e.g. the "Open to collaborations…" line) read as visibly green */
+blockquote {
+  border-left-color: $d-link;
+  color: $d-link;
+}
+blockquote a { color: $d-link-hov; }
 
 .callout {
   border-left-color: $d-link !important;
