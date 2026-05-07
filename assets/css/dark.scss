@@ -2,13 +2,13 @@
 
 // Dark mode — calm near-black with a subtle green undertone.
 // Sage/mint accents do the green-feeling work.
-$d-bg:        #122421;  // very dark, low-saturation green-tinted
-$d-bg-alt:    #0a1916;  // panels / code blocks
+$d-bg:        #171a19;  // near-black, barely-there green undertone
+$d-bg-alt:    #0e1110;  // panels / code blocks
 $d-text:      #FAF7F2;  // cream
-$d-text-soft: #b0bdb8;  // muted gray-mint
-$d-link:      #5DCAA5;  // sage
+$d-text-soft: #aab2af;  // neutral muted
+$d-link:      #5DCAA5;  // sage (the green personality lives in the accents)
 $d-link-hov:  #9FE1CB;  // mint
-$d-border:    #243a34;  // mid hairline
+$d-border:    #262a28;  // neutral hairline
 
 $body-bg: $d-bg !default;
 $body-color: $d-text !default;
