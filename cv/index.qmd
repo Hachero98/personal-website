@@ -4,7 +4,7 @@ description-meta: "Education, research, teaching, and service."
 ---
 
 ::: {.hero-subpage}
-Education, research, and the tools I rely on. [Download the CV (PDF)](Emmanuel_Hackman_CV.pdf).
+Education, research, and the tools I rely on. [Download the CV (PDF)](../cv/Emmanuel_Hackman_CV.pdf).
 :::
 
 ## Education
