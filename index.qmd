@@ -22,11 +22,14 @@ biological mechanisms rather than esoteric math applied in a vacuum.
 I am **Emmanuel Hackman**, a PhD student in Computational Science (Mathematics)
 at the **University of Southern Mississippi**.
 
-My research develops **physics-informed neural networks (PINNs)** for forward
-and inverse problems in partial differential equations: estimating
-**dopamine diffusion and uptake** from sparse electrode recordings, and solving
-the 3D incompressible **Navier–Stokes equations**, with applications to
-Parkinson's disease, fluid dynamics and material science.
+My research sits at the intersection of **mathematical biology**,
+**scientific computing** and **numerical analysis**. I develop
+physics-informed neural networks (PINNs) and numerical methods for forward and
+inverse problems in partial differential equations, with a focus on
+**neuroscience**: estimating dopamine diffusion and uptake from sparse
+electrode recordings in **Parkinson's disease**, and modelling
+**glioblastoma (GBM)**. I also build solvers for the 3D incompressible
+Navier–Stokes equations.
 
 ::: {.hero-links}
 [Research](research/index.qmd) ·
