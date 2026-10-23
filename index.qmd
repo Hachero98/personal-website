@@ -7,8 +7,11 @@ toc: false
 ::: {.hero}
 
 ::: {.hero-question}
-A neural network is only a Navier–Stokes solver\
-if it can beat a 1968 algorithm. I'm trying to find out where it can.
+"All models are wrong, but some are useful."
+[— George E. P. Box]{.hero-attrib}
+
+I try to build the useful kind: grounded in real biological mechanisms,
+and tested against what the data can actually tell us.
 :::
 
 ::: {.hero-grid}

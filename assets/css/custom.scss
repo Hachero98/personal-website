@@ -149,6 +149,18 @@ main.content,
   margin: 0 0 2rem;
 }
 
+.hero .hero-question p { margin-bottom: 0.9rem; }
+.hero .hero-question p:last-child { margin-bottom: 0; }
+
+.hero .hero-attrib {
+  display: block;
+  margin-top: 0.35rem;
+  font-family: $font-family-sans-serif;
+  font-style: normal;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+}
+
 .hero .hero-grid {
   display: grid;
   grid-template-columns: 1fr;
