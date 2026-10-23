@@ -88,12 +88,14 @@ personalize question difficulty in real time.
 
 ## Teaching
 
-**College Algebra (MAT 101)** — *University of Southern Mississippi*\
-Fall 2026
+**Instructor (Graduate Assistant)** — *University of Southern Mississippi*
 
-**Instructor (Graduate Assistant)** — *University of Southern Mississippi*\
-Aug 2023 – May 2025. Multivariate calculus, quantitative methods and
-statistics, more than 50 students.
+- **Fall 2026** — MAT 101 College Algebra (2 sections)
+- **Spring 2026** — MAT 102 Brief Applied Calculus
+- **Fall 2025** — MAT 101S College Algebra Supplement
+- **Spring 2025** — MAT 103 Plane Trigonometry (2 sections)
+- **Fall 2024** — MAT 101 College Algebra (2 sections)
+- **Fall 2023** — MAT 101 College Algebra (teaching assistant)
 
 **Teaching Assistant** — *University of Cape Coast, Ghana*\
 Nov 2022 – Aug 2023
