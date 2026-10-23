@@ -4,21 +4,42 @@ description-meta: "Education, research, teaching, and service."
 ---
 
 ::: {.hero-subpage}
-Education, research, and the tools I rely on. A formatted PDF is available on [request](mailto:emmanuelhackman825@gmail.com).
+Education, research, and the tools I rely on. [Download the CV (PDF)](Emmanuel_Hackman_CV.pdf).
 :::
 
 ## Education
 
-**PhD, Computational Mathematics** — *University of Southern Mississippi*
-*(in progress)*
+**PhD, Computational Science (Mathematics)** — *University of Southern Mississippi*\
+Aug 2025 – present (expected Dec 2030)
+
+**M.S., Mathematics** — *University of Southern Mississippi*\
+Aug 2023 – Aug 2025. Thesis: *Scalable High-Resolution Simulation of the
+Prey-Predator Model, with a Non-local Consumption of Prey.*
+
+**B.S., Mathematics with Economics** — *University of Cape Coast, Ghana*\
+Aug 2018 – Nov 2022
 
 ## Research interests
 
 - Physics-informed neural networks for partial differential equations
 - 3D incompressible Navier–Stokes equations
 - Numerical analysis of scientific machine learning
+- Inverse problems, parameter identifiability and uncertainty quantification
+- Mathematical neuroscience (dopamine transport)
 - Inverse problems in 4D-flow MRI of cerebrospinal fluid
 - Hybrid PINN / finite-volume formulations for high-Reynolds-number flow
+
+## Honors & awards
+
+- **Third Place Poster Award**, 11th SIAM Central States Section Annual
+  Meeting, Jackson State University, Jackson, MS — Oct 2026
+- **NSF Travel Award** (administered by the SIAM Central States Section) —
+  Oct 2026
+
+## Publications & presentations
+
+Two manuscripts under review, an MS thesis, and two conference posters — see
+[Publications](../publications/index.qmd) for the full list with links.
 
 ## Skills
 
@@ -27,12 +48,26 @@ Education, research, and the tools I rely on. A formatted PDF is available on [r
 spectral methods, Runge–Kutta integrators, automatic differentiation.
 **Machine learning.** PINNs, Fourier-feature networks, neural ODEs, residual
 adaptive sampling, NTK-balanced loss weighting.
-**Tooling.** Hydra, Weights & Biases, Docker, Git, GitHub Actions, conda,
-DeepXDE, NVIDIA Modulus, FEniCSx, Dedalus.
+**Tooling.** Flax NNX, Optax, NumPy/SciPy, Equinox, Hydra, Weights & Biases,
+Docker, Git, GitHub Actions, conda, DeepXDE, NVIDIA Modulus, FEniCSx, Dedalus.
 **HPC.** Single-node and multi-GPU training (`jax.pmap`, `torch.distributed`)
-on NVIDIA A100 / H100.
+on NVIDIA A100 / H100; Google Colab GPUs.
 
 ## Selected projects
+
+**Measurement-Aware PINNs for Dopamine Transport** *(2026)*
+An inverse PINN (JAX, Flax NNX, Optax) estimates the diffusion coefficient and
+uptake rate of a 2D reaction–diffusion model of dopamine release from sparse
+electrode recordings, passing the network output through a model of the
+electrode. It is about as accurate as classical least squares and close to the
+Cramér–Rao bound. Submitted to *Biomedical Signal Processing and Control*
+(Elsevier), October 2026.
+[Code & data](https://doi.org/10.5281/zenodo.23518612)
+
+**MS Thesis: Non-local Prey-Predator Simulation** *(2025)*
+A Krylov subspace spectral solver for stiff, non-local prey-predator models,
+up to 40× faster than standard exponential integrators, with relative errors
+below $10^{-8}$ on grids up to $N = 8000$.
 
 **PINN-NS Research Workspace** *(2026)*
 Modular dissertation codebase — separates differential operators, PINN
@@ -40,14 +75,12 @@ architectures, samplers, trainers, and loss formulations so each can be swapped
 without rewriting the others. Fully config-driven (Hydra-style YAML), with a
 reproducibility checklist on every experiment.
 
-**3D Navier–Stokes Beltrami Benchmark** *(in progress, 2026)*
-PINN validated against the closed-form Beltrami solution (Ethier & Steinman 1994),
-with a classical projection-method baseline for side-by-side $L^2$ / divergence
-/ wall-clock comparison.
-
-**Method of Manufactured Solutions for 3D PINNs** *(in progress, 2026)*
-Adam-only vs Adam→L-BFGS optimizer study on a manufactured 3D solenoidal velocity
-field with analytic forcing.
+**Adaptive Actuarial Exam Prep Platform** *(2026)*
+Full-stack adaptive learning platform (FastAPI, Next.js/TypeScript,
+PostgreSQL, Redis) for SOA actuarial exams. Uses Item Response Theory and
+Bayesian Knowledge Tracing with Fisher-information-based item selection to
+personalize question difficulty in real time.
+[github.com/Hachero98/actuarialprep](https://github.com/Hachero98/actuarialprep)
 
 ## Service & community
 
@@ -55,8 +88,16 @@ field with analytic forcing.
 
 ## Teaching
 
-*To be added.*
+**College Algebra (MAT 101)** — *University of Southern Mississippi*\
+Fall 2026
+
+**Instructor (Graduate Assistant)** — *University of Southern Mississippi*\
+Aug 2023 – May 2025. Multivariate calculus, quantitative methods and
+statistics, more than 50 students.
+
+**Teaching Assistant** — *University of Cape Coast, Ghana*\
+Nov 2022 – Aug 2023
 
 ---
 
-*Last updated: 2026-05-06.*
+*Last updated: 2026-10-23.*

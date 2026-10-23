@@ -1,11 +1,24 @@
 ---
 title: "Publications"
-description-meta: "Papers, preprints, and reproducible research artifacts."
+description-meta: "Papers, preprints, posters, and reproducible research artifacts."
 ---
 
 ::: {.hero-subpage}
-A record in progress — papers, preprints, and the reproducible artifacts behind each one.
+Papers, posters, and the reproducible artifacts behind each one.
 :::
+
+## Submitted / under review
+
+1. **E. Hackman**, M. Sakyi, H. Zhu. *Measurement-aware physics-informed neural
+   networks for estimating dopamine diffusion and uptake from sparse electrode
+   recordings.* Submitted to *Biomedical Signal Processing and Control*
+   (Elsevier), October 2026.
+   [\[Code & data\]](https://doi.org/10.5281/zenodo.23518612) ·
+   [\[GitHub\]](https://github.com/Hachero98/dopamine-PINN-)
+
+2. J. Ding, **E. Hackman**, H. Zhu. *Difference equations and limits in
+   geometry.* Submitted to *The American Mathematical Monthly* (Taylor &
+   Francis), September 2026.
 
 ## In preparation
 
@@ -15,7 +28,19 @@ Navier–Stokes with Applications to Cerebrospinal Fluid Flow.* (2026)
 *— in preparation.*
 :::
 
+## Thesis
+
+**E. Hackman.** *Scalable high-resolution simulation of the prey-predator model,
+with a non-local consumption of prey.* MS thesis, University of Southern
+Mississippi, 2025. The Aquila Digital Community — available via
+[Google Scholar](https://scholar.google.com/citations?user=YrLy1ZIAAAAJ).
+
 ## Software & artifacts
+
+**dopamine-PINN** (2026). JAX/Flax code, data and results for the dopamine
+paper, MIT License.
+[\[Zenodo\]](https://doi.org/10.5281/zenodo.23518612) ·
+[\[GitHub\]](https://github.com/Hachero98/dopamine-PINN-)
 
 **PINN-NS Research Workspace** (2026). Open-source dissertation workspace —
 modular PINN solvers, classical numerical baselines, manufactured solutions, and
@@ -39,11 +64,18 @@ projection-method baseline) is targeted for the second half of 2026.
 
 ## Posters
 
-*To be added.*
+- **E. Hackman**, H. Zhu. *Inverse physics-informed neural networks for synaptic
+  dopamine transport: parameter recovery at the information limit of sparse,
+  noisy data.* 11th SIAM Central States Section Annual Meeting, Jackson State
+  University, Jackson, MS, October 10–11, 2026. **Third Place Poster Award.**
+
+- **E. Hackman**, H. Zhu. *When inverse physics-informed neural networks become
+  practically identifiable: a case study in synaptic dopamine transport.*
+  Mississippi IDeA/EPSCoR Conference 2026 (MIEC26), Hattiesburg, MS, July 2026.
 
 ---
 
 ::: {.callout-tip appearance="minimal"}
 For pre-prints and code, see my [GitHub](https://github.com/Hachero98) or
-[email me](mailto:emmanuelhackman825@gmail.com).
+[email me](mailto:Emmanuel.Hackman@usm.edu).
 :::

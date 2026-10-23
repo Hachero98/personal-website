@@ -1,6 +1,6 @@
 ---
 title: "Research"
-description-meta: "Physics-informed neural networks for the 3D incompressible Navier–Stokes equations."
+description-meta: "Physics-informed neural networks for dopamine transport and the 3D incompressible Navier–Stokes equations."
 ---
 
 ::: {.hero-subpage}
@@ -11,9 +11,11 @@ Can a neural network solve the Navier–Stokes equations as well as a classical 
 
 My PhD research develops **physics-informed neural networks (PINNs)** as an
 alternative — and a complement — to classical mesh-based solvers for the
-incompressible Navier–Stokes system. The work spans three threads: rigorous
-benchmarking against analytic solutions, hybrid PINN/finite-volume formulations,
-and translational applications in medical imaging and material science.
+incompressible Navier–Stokes system. The work spans rigorous benchmarking
+against analytic solutions, hybrid PINN/finite-volume formulations, and
+translational applications in medical imaging and material science. A second,
+completed thread uses inverse PINNs to estimate dopamine diffusion and uptake
+from sparse electrode recordings.
 
 ## The mathematical setting
 
@@ -48,7 +50,36 @@ PyTorch automatic differentiation.
 
 ## Research threads
 
-### 1. Benchmarking PINNs against analytic solutions
+### 1. Measurement-aware PINNs for dopamine transport
+
+Electrodes record dopamine at only one or a few sites, with noise and with
+distortions from the sensor itself. I estimate the diffusion coefficient $D$
+and the transporter-mediated uptake rate $k$ of a two-dimensional
+reaction–diffusion model of a single release event with an inverse PINN whose
+data term passes the network output through a model of the electrode: tip
+averaging, a first-order response lag, whitening of correlated noise and
+removal of an unknown baseline offset. Each estimate is compared with the
+Cramér–Rao bound of the recording design and with classical least squares on
+the true model, which separates the error of the network from the error the
+data allow.
+
+**Main findings:** the network is about as accurate as the classical fit and
+close to the bound; the uptake rate is identifiable from a single electrode,
+while the diffusion coefficient needs a site near the release site or two
+sites; ignoring a 2-ms electrode lag more than doubles the estimated diffusion
+coefficient; and modelling the sensor with a short pre-stimulus baseline
+restores unbiased estimates with close to nominal uncertainty intervals.
+
+**Status:** submitted to *Biomedical Signal Processing and Control* (Elsevier),
+October 2026. Code and data:
+[doi.org/10.5281/zenodo.23518612](https://doi.org/10.5281/zenodo.23518612).
+
+*Next:* counterfactual ("what-if") inference for dopamine transport, predicting
+how the concentration field would change under an intervention such as
+transporter blockade, first for the linear model and then for nonlinear
+Michaelis–Menten uptake.
+
+### 2. Benchmarking PINNs against analytic solutions
 
 Every PINN result is reported alongside a classical baseline (projection method,
 spectral solver, RK4) on canonical flows where ground truth is known:
@@ -58,14 +89,14 @@ spectral solver, RK4) on canonical flows where ground truth is known:
 **Reported metrics:** $L^2$ relative error, $L^\infty$ error, divergence
 $\lVert \nabla \cdot \mathbf{u} \rVert_2$, wall-clock, and GPU memory.
 
-### 2. Hybrid PINN / finite-volume formulations
+### 3. Hybrid PINN / finite-volume formulations
 
 I am exploring formulations that combine PINN flexibility (mesh-free, easily
 incorporates data) with the conservation guarantees of finite-volume schemes —
 trying to inherit the best of both worlds while keeping training stable on
 high-Reynolds-number flows.
 
-### 3. Cerebrospinal fluid flow in Parkinson's disease
+### 4. Cerebrospinal fluid flow in Parkinson's disease
 
 The longer-term application is **inverse problems on 4D-flow MRI** of
 cerebrospinal fluid (CSF). The goal: recover effective viscosity and flow
@@ -73,7 +104,7 @@ parameters from sparse, noisy clinical data, where classical solvers struggle
 with the lack of clean boundary conditions but PINNs can ingest the data
 directly.
 
-### 4. Material science applications
+### 5. Material science applications
 
 Secondary application area: pore-scale flow simulation in heterogeneous porous
 media, where multi-scale PINN architectures show promise.
@@ -84,6 +115,7 @@ media, where multi-scale PINN architectures show promise.
 - **Stack:** JAX + Equinox, PyTorch, Hydra (config), Weights & Biases (logging),
   DeepXDE / NVIDIA Modulus (reference baselines).
 - **Numerical baselines:** FEniCSx, Dedalus (spectral), in-house projection solver.
+- **Dopamine project:** JAX, Flax NNX, Optax, NumPy/SciPy, Google Colab GPUs.
 - Every experiment writes a `manifest.json` with git SHA, config hash, seed,
   hardware, library versions, wall-clock, and final metrics — fully
   reproducible from a single config file.

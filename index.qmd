@@ -15,12 +15,14 @@ if it can beat a 1968 algorithm. I'm trying to find out where it can.
 ![](assets/img/profile.jpg){.hero-photo fig-alt="Portrait of Emmanuel Hackman"}
 
 ::: {.hero-bio}
-I am **Emmanuel Hackman**, a PhD candidate in computational mathematics at the
-**University of Southern Mississippi**.
+I am **Emmanuel Hackman**, a PhD student in Computational Science (Mathematics)
+at the **University of Southern Mississippi**.
 
-My research develops **physics-informed neural networks** for the 3D
-incompressible **Navier–Stokes equations**, with applications to fluid
-dynamics, material science, and **cerebrospinal fluid flow in Parkinson's disease**.
+My research develops **physics-informed neural networks (PINNs)** for forward
+and inverse problems in partial differential equations: estimating
+**dopamine diffusion and uptake** from sparse electrode recordings, and solving
+the 3D incompressible **Navier–Stokes equations**, with applications to
+Parkinson's disease, fluid dynamics and material science.
 
 ::: {.hero-links}
 [Research](research/index.qmd) ·
@@ -42,6 +44,9 @@ dynamics, material science, and **cerebrospinal fluid flow in Parkinson's diseas
 [Scientific machine learning]{.tag}
 [Cerebrospinal fluid flow]{.tag}
 [Parkinson's disease imaging]{.tag}
+[Inverse problems]{.tag}
+[Parameter identifiability and uncertainty quantification]{.tag}
+[Mathematical neuroscience (dopamine transport)]{.tag}
 
 ## What I am working on
 
@@ -58,11 +63,15 @@ See [Research](research/index.qmd) for details.
 
 ## Recent
 
+- **2026-10** — Paper on measurement-aware PINNs for dopamine diffusion and uptake submitted to *Biomedical Signal Processing and Control* (Elsevier); code and data archived on [Zenodo](https://doi.org/10.5281/zenodo.23518612).
+- **2026-10** — **Third Place Poster Award** at the 11th SIAM Central States Section Annual Meeting, Jackson State University, Jackson, MS (travel supported by an NSF Travel Award).
+- **2026-09** — Paper "Difference Equations and Limits in Geometry" (with Jiu Ding and Huijian Zhu) submitted to *The American Mathematical Monthly*.
+- **2026-07** — Poster at the Mississippi IDeA/EPSCoR Conference 2026 (MIEC26), Hattiesburg, MS.
 - **2026-05** — First experiment runs (Kovasznay AD-vs-FV) completed; pressure metric fix landed.
 - **2026-05** — Dissertation research workspace scaffolded with full reproducibility checklist.
-- **2026** — Coursework and qualifying exam preparation at USM.
 
 ---
 
 > Open to collaborations on PINNs for incompressible flow, inverse problems
-> in 4D-flow MRI, and physics-informed benchmarks. [Get in touch.](contact.qmd)
+> in 4D-flow MRI, inverse problems for neurotransmitter transport and
+> electrochemical sensing, and physics-informed benchmarks. [Get in touch.](contact.qmd)
