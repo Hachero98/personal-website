@@ -28,8 +28,8 @@ physics-informed neural networks (PINNs) and numerical methods for forward and
 inverse problems in partial differential equations, with a focus on
 **neuroscience**: estimating dopamine diffusion and uptake from sparse
 electrode recordings in **Parkinson's disease**, and modelling
-**glioblastoma (GBM)**. I also build solvers for the 3D incompressible
-Navier–Stokes equations.
+**glioblastoma (GBM)**. Next, I plan to extend this work to medical imaging,
+possibly in 3D.
 
 ::: {.hero-links}
 [Research](research/index.qmd) ·
@@ -44,28 +44,24 @@ Navier–Stokes equations.
 
 ## Research interests
 
+[Mathematical biology]{.tag}
 [Physics-informed neural networks]{.tag}
-[Navier–Stokes equations]{.tag}
-[Computational fluid dynamics]{.tag}
+[Scientific computing]{.tag}
 [Numerical analysis]{.tag}
 [Scientific machine learning]{.tag}
-[Cerebrospinal fluid flow]{.tag}
-[Parkinson's disease imaging]{.tag}
+[Parkinson's disease]{.tag}
+[Glioblastoma (GBM)]{.tag}
 [Inverse problems]{.tag}
 [Parameter identifiability and uncertainty quantification]{.tag}
 [Mathematical neuroscience (dopamine transport)]{.tag}
 
 ## What I am working on
 
-I am building a reproducible research pipeline that benchmarks PINN-based
-solvers against classical numerical baselines — projection methods, spectral
-solvers, RK4 time integration — on canonical problems such as Taylor–Green,
-Kovasznay, and Beltrami flow, and then transfers the validated method to
-medical imaging data.
-
-The headline near-term result is a **3D Navier–Stokes PINN validated against
-the analytic Beltrami benchmark**, with side-by-side classical baselines on
-$L^2$ error, divergence, and wall-clock cost.
+My first paper — measurement-aware PINNs that estimate **dopamine diffusion
+and uptake** from sparse electrode recordings — is submitted and under review.
+I am now extending it to counterfactual inference (how would dopamine respond
+to an intervention such as transporter blockade?) and to nonlinear
+Michaelis–Menten uptake, and modelling glioblastoma (GBM).
 See [Research](research/index.qmd) for details.
 
 ## Recent
@@ -74,11 +70,9 @@ See [Research](research/index.qmd) for details.
 - **2026-10** — **Third Place Poster Award** at the 11th SIAM Central States Section Annual Meeting, Jackson State University, Jackson, MS (travel supported by an NSF Travel Award).
 - **2026-09** — Paper "Difference Equations and Limits in Geometry" (with Jiu Ding and Huijian Zhu) submitted to *The American Mathematical Monthly*.
 - **2026-07** — Poster at the Mississippi IDeA/EPSCoR Conference 2026 (MIEC26), Hattiesburg, MS.
-- **2026-05** — First experiment runs (Kovasznay AD-vs-FV) completed; pressure metric fix landed.
-- **2026-05** — Dissertation research workspace scaffolded with full reproducibility checklist.
 
 ---
 
-> Open to collaborations on PINNs for incompressible flow, inverse problems
-> in 4D-flow MRI, inverse problems for neurotransmitter transport and
-> electrochemical sensing, and physics-informed benchmarks. [Get in touch.](contact.qmd)
+> Open to collaborations on inverse problems for neurotransmitter transport and
+> electrochemical sensing, mathematical models of glioblastoma, and
+> physics-informed methods for medical imaging. [Get in touch.](contact.qmd)

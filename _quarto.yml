@@ -16,7 +16,7 @@ lang: en-US
 
 website:
   title: "Emmanuel Hackman"
-  description: "PhD student in Computational Science (Mathematics) — physics-informed neural networks for inverse problems and 3D Navier–Stokes."
+  description: "PhD student in Computational Science (Mathematics) — mathematical biology, neuroscience and scientific computing with physics-informed neural networks."
   site-url: "https://personal-website-hachero98.vercel.app"
   repo-url: "https://github.com/Hachero98/personal-website"
   favicon: assets/img/profile.jpg

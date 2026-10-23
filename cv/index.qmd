@@ -21,13 +21,12 @@ Aug 2018 – Nov 2022
 
 ## Research interests
 
+- Mathematical biology and mathematical neuroscience (dopamine transport)
+- Mathematical modelling of glioblastoma (GBM)
 - Physics-informed neural networks for partial differential equations
-- 3D incompressible Navier–Stokes equations
-- Numerical analysis of scientific machine learning
 - Inverse problems, parameter identifiability and uncertainty quantification
-- Mathematical neuroscience (dopamine transport)
-- Inverse problems in 4D-flow MRI of cerebrospinal fluid
-- Hybrid PINN / finite-volume formulations for high-Reynolds-number flow
+- Scientific computing and numerical analysis
+- Medical imaging (planned)
 
 ## Honors & awards
 
@@ -68,12 +67,6 @@ Cramér–Rao bound. Submitted to *Biomedical Signal Processing and Control*
 A Krylov subspace spectral solver for stiff, non-local prey-predator models,
 up to 40× faster than standard exponential integrators, with relative errors
 below $10^{-8}$ on grids up to $N = 8000$.
-
-**PINN-NS Research Workspace** *(2026)*
-Modular dissertation codebase — separates differential operators, PINN
-architectures, samplers, trainers, and loss formulations so each can be swapped
-without rewriting the others. Fully config-driven (Hydra-style YAML), with a
-reproducibility checklist on every experiment.
 
 **Adaptive Actuarial Exam Prep Platform** *(2026)*
 Full-stack adaptive learning platform (FastAPI, Next.js/TypeScript,

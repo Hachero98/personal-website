@@ -5,7 +5,7 @@ toc: false
 ---
 
 ::: {.hero-subpage}
-Always glad to hear from collaborators, students, and anyone curious about PINNs for fluid dynamics or medical imaging.
+Always glad to hear from collaborators, students, and anyone curious about mathematical biology, PINNs or scientific computing.
 :::
 
 ## Email
